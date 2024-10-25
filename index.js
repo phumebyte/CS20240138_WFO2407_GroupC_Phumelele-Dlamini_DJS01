@@ -17,7 +17,7 @@ const newDistance = distanceInKm + (velocityInKPH * timeInSeconds / 3600) //calc
 const calculateRemainingFuel = remainingFuel - (fuelBurnRate * timeInSeconds) //calculates remaining fuel
 
 // Pick up an error with how the function below is called and make it robust to such errors
-calcNewVel = (vel, acc, time) => { 
+const calcNewVel = (vel, acc, time) => { 
   if (typeof vel !== 'number' || typeof acc !== 'number' || typeof time !== 'number'){
     throw new Error('All parameters must be numbers')
   } else if(acc < 0 || vel < 0 || time <= 0) {
