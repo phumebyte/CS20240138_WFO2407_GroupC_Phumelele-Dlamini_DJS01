@@ -16,7 +16,6 @@ const fuelBurnRate = 0.5; // fuel burn rate (kg/s)
 //calculations
 const newDistance = distanceInKm + (velocityInKPH * timeInSeconds / 3600) //calcultes new distance
 const calculateRemainingFuel = remainingFuel - (fuelBurnRate * timeInSeconds) //calculates remaining fuel
-const newVelocity = calcNewVel(acceleration, velocityInKPH, timeInSeconds) //calculates new velocity based on acceleration
 
 // Pick up an error with how the function below is called and make it robust to such errors
 calcNewVel = (vel, acc, time) => { 
@@ -28,6 +27,8 @@ calcNewVel = (vel, acc, time) => {
     vel =  vel * 1000 / 3600 // convert velocity from km/h to m/s
     return vel + (acc * time)
 }
+
+const newVelocity = calcNewVel(acceleration, velocityInKPH, timeInSeconds) //calculates new velocity based on acceleration
 
 console.log(`Corrected New Velocity: ${newVelocity * 3600 / 1000} km/h`);
 console.log(`Corrected New Distance: ${newDistance} km`);
