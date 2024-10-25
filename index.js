@@ -8,7 +8,6 @@
 const velocityInKPH = 10000; // velocity (km/h)
 const acceleration = 3; // acceleration (m/s^2)
 const timeInSeconds = 3600; // seconds (1 hour)
-const distanceInKm = 0; // distance (km)
 const remainingFuel = 5000; // remaining fuel (kg)
 const fuelBurnRate = 0.5; // fuel burn rate (kg/s)
 
