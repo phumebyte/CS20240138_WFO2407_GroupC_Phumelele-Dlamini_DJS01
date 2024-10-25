@@ -28,7 +28,7 @@ calcNewVel = (vel, acc, time) => {
     return vel + (acc * time)
 }
 
-const newVelocity = calcNewVel(acceleration, velocityInKPH, timeInSeconds) //calculates new velocity based on acceleration
+const newVelocity = calcNewVel(velocityInKPH, acceleration, timeInSeconds) //calculates new velocity based on acceleration
 
 console.log(`Corrected New Velocity: ${newVelocity * 3600 / 1000} km/h`);
 console.log(`Corrected New Distance: ${newDistance} km`);
