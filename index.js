@@ -29,7 +29,7 @@ calcNewVel = (vel, acc, time) => {
     return vel + (acc * time)
 }
 
-console.log(`Corrected New Velocity: ${newVelocity} km/h`);
+console.log(`Corrected New Velocity: ${newVelocity * 3600 / 1000} km/h`);
 console.log(`Corrected New Distance: ${newDistance} km`);
 console.log(`Corrected Remaining Fuel: ${calculateRemainingFuel} kg`);
 
