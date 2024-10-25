@@ -21,8 +21,8 @@ const calculateRemainingFuel = remainingFuel - (fuelBurnRate * timeInSeconds) //
 calcNewVel = (vel, acc, time) => { 
   if (typeof vel !== 'number' || typeof acc !== 'number' || typeof time !== 'number'){
     throw new Error('All parameters must be numbers')
-  } else if(acc <= 0 || vel <= 0 || time <= 0) {
-    throw new Error('Values cannot be less than or equal to 0')
+  } else if(acc < 0 || vel < 0 || time <= 0) {
+    throw new Error('Acceleration and velocity must be non-negative, and time must be positive.')
   }
     vel =  vel * 1000 / 3600 // convert velocity from km/h to m/s
     return vel + (acc * time)
