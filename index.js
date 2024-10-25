@@ -4,7 +4,6 @@
  * 2. Pick up calculation errors
  * 3. Make these calculations robust such that the calculation does not give an incorrect result, it throws an error to the user if something has gone wrong (parameter used with an incorrect unit of measurement, etc)
  */
-
 // Given Parameters
 const velocityInKPH = 10000; // velocity (km/h)
 const acceleration = 3; // acceleration (m/s^2)
@@ -30,12 +29,7 @@ calcNewVel = (vel, acc, time) => {
 
 const newVelocity = calcNewVel(velocityInKPH, acceleration, timeInSeconds) //calculates new velocity based on acceleration
 
+//limit the answer to 2 decimal places
 console.log(`Corrected New Velocity: ${(newVelocity * 3600 / 1000).toFixed(2)} km/h`);
 console.log(`Corrected New Distance: ${newDistance.toFixed(2)} km`);
 console.log(`Corrected Remaining Fuel: ${calculateRemainingFuel.toFixed(2)} kg`);
-
-
-
-
-
-
